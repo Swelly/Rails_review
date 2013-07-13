@@ -1,13 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-
+gem 'yahoofinance'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 
+group :development do
+  gem 'sqlite3' #i'm not using a db with this app
+  gem 'pry'
+  gem 'pry-rails'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

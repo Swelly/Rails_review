@@ -1,7 +1,9 @@
 StockApp::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-root :to => 'welcome#index'
+root :to => 'welcome#index', :as => 'home'
+get '/stock' => 'welcome#stock', :as => 'stock_lookup'
+get '/stock/show' => 'welcome#show', :as => 'stock_show'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
