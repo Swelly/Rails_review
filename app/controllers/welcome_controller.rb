@@ -5,12 +5,9 @@ class WelcomeController < ApplicationController
 
   def stock
   end
-
+#going for a class method to call from the model
   def show
     symbol = params[:symbol].upcase
-    quote = YahooFinance::get_standard_quotes(symbol)
-    stock = quote[symbol]
-    @price = stock.lastTrade
+    @stock = Stock.quote(symbol)
   end
-
 end
